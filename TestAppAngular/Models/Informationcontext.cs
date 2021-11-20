@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestAppAngular.Models
 {
-    public class InformationContext: DbContext
+    public class Informationcontext: DbContext
     {
-        public InformationContext(DbContextOptions<InformationContext> options):
+        public Informationcontext(DbContextOptions<Informationcontext> options):
             base(options) {}
         public DbSet<Information> Information { get; set; }
         public string DbPath { get; private set; }
