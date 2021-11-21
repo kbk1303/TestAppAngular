@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 using TestAppAngular.DataRepository;
 using TestAppAngular.Models;
 
@@ -39,6 +40,8 @@ namespace TestAppAngular
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<IInformationRepo, SqlInformationRepo>();
         }
