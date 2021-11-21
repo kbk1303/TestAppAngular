@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject, OnInit } from '@angular/core';
+import { Information } from '../interfaces/information';
 
 @Component({
   selector: 'app-show-all-information',
@@ -19,11 +20,4 @@ export class ShowAllInformationComponent implements OnInit {
   ngOnInit() {
   }
 
-}
-
-export interface Information {
-  id: number,
-  headLine: string,
-  breadText: string,
-  footer: string
 }
