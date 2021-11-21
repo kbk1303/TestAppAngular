@@ -9,6 +9,15 @@ namespace TestAppAngular.Models
 {
     public class Information
     {
+
+        public Information(int v1, string v2, string v3, string v4)
+        {
+            this.Id = v1;
+            this.HeadLine = v2;
+            this.BreadText = v3;
+            this.Footer = v4;
+        }
+
         [Key]
         public int Id { get; set; }
         [MaxLength(80)]
