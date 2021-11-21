@@ -8,7 +8,10 @@ namespace TestAppAngular.DataRepository
 {
     public interface IInformationRepo
     {
+        bool SaveChanges();
         IEnumerable<Information> FetchAllInformations();
         Information GetInformationById(int id);
+        void CreateInformation(Information info);
+
     }
 }

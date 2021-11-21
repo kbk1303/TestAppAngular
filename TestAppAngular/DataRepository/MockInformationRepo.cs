@@ -8,6 +8,11 @@ namespace TestAppAngular.DataRepository
 {
     public class MockInformationRepo : IInformationRepo
     {
+        public void CreateInformation(Information info)
+        {
+          
+        }
+
         public IEnumerable<Information> FetchAllInformations()
         {
             return new List<Information>()
@@ -21,6 +26,11 @@ namespace TestAppAngular.DataRepository
         public Information GetInformationById(int id)
         {
             return new Information(id, "HeadLineMock", "This is a bread text mockup", "This is a Footer");
+        }
+
+        public bool SaveChanges()
+        {
+            return true;
         }
     }
 }
