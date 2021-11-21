@@ -69,5 +69,19 @@ namespace TestAppAngular.Controllers
             repo.SaveChanges();
             return NoContent();
         }
+
+        //DELETE api/informations/{id}
+        [HttpDelete("{id}")]
+        public ActionResult DeleteInformation(int id)
+        {
+            var exists = repo.GetInformationById(id);
+            if (exists.Equals(null))
+                return NotFound();
+
+            repo.DeleteInformation(exists);
+            repo.SaveChanges();
+            return NoContent();
+
+        }
     }
 }

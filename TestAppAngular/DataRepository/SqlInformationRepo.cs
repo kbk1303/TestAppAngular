@@ -22,6 +22,13 @@ namespace TestAppAngular.DataRepository
 
         }
 
+        public void DeleteInformation(Information info)
+        {
+            if (info.Equals(null))
+                throw new ArgumentNullException("info object cannot be null!: " + nameof(info));
+            context.Informations.Remove(info);
+        }
+
         public IEnumerable<Information> FetchAllInformations()
         {
             return this.context.Informations.ToList();

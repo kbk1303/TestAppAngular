@@ -10,6 +10,7 @@ using System;
 using TestAppAngular.DataRepository;
 using TestAppAngular.Models;
 
+
 namespace TestAppAngular
 {
     public class Startup
@@ -40,6 +41,8 @@ namespace TestAppAngular
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            //services.AddControllers().
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

@@ -13,6 +13,11 @@ namespace TestAppAngular.DataRepository
           
         }
 
+        public void DeleteInformation(Information info)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Information> FetchAllInformations()
         {
             return new List<Information>()
@@ -35,7 +40,7 @@ namespace TestAppAngular.DataRepository
 
         public void UpdateInformation(Information info)
         {
-            
+            //nothing
         }
     }
 }

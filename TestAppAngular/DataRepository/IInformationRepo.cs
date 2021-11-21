@@ -15,5 +15,7 @@ namespace TestAppAngular.DataRepository
 
         void UpdateInformation(Information info);
 
+        void DeleteInformation(Information info);
+
     }
 }
