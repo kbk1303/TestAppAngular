@@ -1,3 +1,35 @@
-<p>
-  show-information works!
-</p>
+<div class="header">Informationsside</div>
+
+<div class=" sub-line">Du skal indtaste id'et for den information du ønsker at se herunder:</div>
+
+<form [formGroup]="informationForm" (ngSubmit)="onSubmit()">
+  <label for="informationId">Informationsid</label>
+  <input type="text" style="width:50px;" id="informationId" name="informationId"
+         class="form.control" formControlName="informationId"
+         [class.is.valid]="informationForm.get('informationId')!.invalid && informationForm.get('informationId')!.touched" required />
+  <label for="submitBtn">Hent data:</label>
+  <button type="submit" [disabled]="!informationForm.valid">Hent Data</button>
+</form>
+<br />
+<br />
+
+<p *ngIf="!information"><em>Loading...</em></p>
+
+<table class='table' *ngIf="information">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Overskrift</th>
+      <th>Brødtekst</th>
+      <th>Footer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ information.id }}</td>
+      <td>{{ information.headLine }}</td>
+      <td>{{ information.breadText }}</td>
+      <td>{{ information.footer }}</td>
+    </tr>
+  </tbody>
+</table>

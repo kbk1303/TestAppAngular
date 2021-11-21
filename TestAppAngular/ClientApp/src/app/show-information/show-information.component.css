@@ -1,0 +1,14 @@
+.header {
+  font-size: 2em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(214, 179, 91);
+  filter: drop-shadow(10px 4px 6px #675317);
+  padding-top: 10px;
+}'
+ '
+.sub-line {
+  font-size: 1.4rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(214, 179, 91);
+  filter: drop-shadow(10px 4px 6px #675317);
+}
