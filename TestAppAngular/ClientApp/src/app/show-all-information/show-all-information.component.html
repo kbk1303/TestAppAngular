@@ -1,0 +1,24 @@
+<h1>All information</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!informations"><em>Loading...</em></p>
+
+<table class='table' *ngIf="informations">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Overskrift</th>
+      <th>Brødtekst</th>
+      <th>Footer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let information of informations">
+      <td>{{ information.id }}</td>
+      <td>{{ information.headLine }}</td>
+      <td>{{ information.breadText }}</td>
+      <td>{{ information.footer }}</td>
+    </tr>
+  </tbody>
+</table>
