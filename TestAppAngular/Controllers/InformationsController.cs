@@ -12,7 +12,12 @@ namespace TestAppAngular.Controllers
     [Route("api/[controller]")]
     public class InformationsController : ControllerBase
     {
-        private MockInformationRepo repo = new MockInformationRepo();
+        private readonly IInformationRepo repo;
+        public InformationsController(IInformationRepo repo)
+        {
+            this.repo = repo;
+        }
+        
         // GET api/informations
         [HttpGet]
         public ActionResult<IEnumerable<Information>> GetAllInformations()
