@@ -13,5 +13,7 @@ namespace TestAppAngular.DataRepository
         Information GetInformationById(int id);
         void CreateInformation(Information info);
 
+        void UpdateInformation(Information info);
+
     }
 }

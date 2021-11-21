@@ -32,5 +32,10 @@ namespace TestAppAngular.DataRepository
         {
             return true;
         }
+
+        public void UpdateInformation(Information info)
+        {
+            
+        }
     }
 }

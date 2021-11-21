@@ -36,5 +36,10 @@ namespace TestAppAngular.DataRepository
         {
             return this.context.SaveChanges() >= 0;
         }
+
+        public void UpdateInformation(Information info)
+        {
+            //nothing
+        }
     }
 }

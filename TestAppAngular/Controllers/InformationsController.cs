@@ -23,23 +23,23 @@ namespace TestAppAngular.Controllers
             this.repo = repo;
             this.mapper = mapper;
         }
-        
+
         // GET api/informations
         [HttpGet]
         public ActionResult<IEnumerable<Information>> GetAllInformations()
         {
             var items = repo.FetchAllInformations();
             return Ok(mapper.Map<IEnumerable<InformationReadDto>>(items));
-        } 
-        
-        // GEt api/informations/5
+        }
+
+        // GET api/informations/{id}
         [HttpGet("{id}", Name = "GetInformationById")]
         public ActionResult<InformationReadDto> GetInformationById(int id)
         {
             var result = repo.GetInformationById(id);
             if (result != null)
-                return Ok(mapper.Map<InformationReadDto>(result)); 
-            return NotFound(); 
+                return Ok(mapper.Map<InformationReadDto>(result));
+            return NotFound();
         }
 
         //POST api/informations
@@ -57,5 +57,17 @@ namespace TestAppAngular.Controllers
             //return Ok(ReadDto);
         }
 
+        //PUT api/informations/{id}
+        [HttpPut("{id}")]
+        public ActionResult UpdateInformation(int id, InformationUpdateDto UpdatedInfo)
+        {
+            var exists = repo.GetInformationById(id);
+            if (exists.Equals(null))
+                return NotFound();
+            mapper.Map(UpdatedInfo, exists);
+            repo.UpdateInformation(exists);
+            repo.SaveChanges();
+            return NoContent();
+        }
     }
 }

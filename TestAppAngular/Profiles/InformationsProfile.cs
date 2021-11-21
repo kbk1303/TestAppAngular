@@ -15,6 +15,7 @@ namespace TestAppAngular.Profiles
             // source -> dest
             CreateMap<Information, InformationReadDto>();
             CreateMap<InformationCreateDto, Information>();
+            CreateMap<InformationUpdateDto, Information>();
         }
     }
 }
