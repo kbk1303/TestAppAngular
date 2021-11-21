@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ShowAllInformationComponent } from './show-all-information/show-all-information.component';
+import { ShowInformationComponent } from './show-information/show-information.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ShowAllInformationComponent } from './show-all-information/show-all-inf
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    ShowAllInformationComponent
+    ShowAllInformationComponent,
+    ShowInformationComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,6 +31,7 @@ import { ShowAllInformationComponent } from './show-all-information/show-all-inf
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'show-all-information', component: ShowAllInformationComponent },
+      { path: 'show-information', component: ShowInformationComponent },
     ])
   ],
   providers: [],
