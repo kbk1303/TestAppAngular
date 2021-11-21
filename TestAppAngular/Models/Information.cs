@@ -9,7 +9,10 @@ namespace TestAppAngular.Models
 {
     public class Information
     {
+        public Information()
+        {
 
+        }
         public Information(int v1, string v2, string v3, string v4)
         {
             this.Id = v1;
@@ -19,12 +22,16 @@ namespace TestAppAngular.Models
         }
 
         [Key]
+        [Required]
         public int Id { get; set; }
         [MaxLength(80)]
+        [Required]
         public string HeadLine { get; set; }
         [MaxLength(300)]
+        [Required]
         public string BreadText { get; set; }
         [MaxLength(80)]
+        [Required]
         public string Footer { get; set; }
 
     }

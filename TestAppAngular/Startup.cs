@@ -30,7 +30,7 @@ namespace TestAppAngular
         public void ConfigureServices(IServiceCollection services)
         {
             /* entity framework */
-            services.AddDbContextPool<Informationcontext>(options => options.UseSqlServer(Configuration.GetConnectionString("InformationDB")));
+            services.AddDbContextPool<Informationcontext>(options => options.UseSqlServer(Configuration.GetConnectionString("InformationConnection")));
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddMvc(options => options.EnableEndpointRouting = false);

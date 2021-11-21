@@ -10,7 +10,7 @@ namespace TestAppAngular.Models
     {
         public Informationcontext(DbContextOptions<Informationcontext> options):
             base(options) {}
-        public DbSet<Information> Information { get; set; }
+        public DbSet<Information> Informations { get; set; }
 
     }
 }
